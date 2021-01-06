@@ -10,6 +10,8 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using System.Reflection;
+using System.IO;
 
 namespace RandoWoodAPI
 {
@@ -42,7 +44,7 @@ namespace RandoWoodAPI
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "RandoWoodAPI", Version = "v1" });
-                // c.IncludeXmlComments()
+                c.IncludeXmlComments(GetXmlCommentsPath());
             });
         }
 
@@ -68,6 +70,16 @@ namespace RandoWoodAPI
             {
                 endpoints.MapControllers();
             });
+        }
+
+        private string GetXmlCommentsPath()
+        {
+            string xmlFile = $"{Assembly.GetExecutingAssembly().GetName().Name}.xml";
+            string appPath = AppContext.BaseDirectory;
+
+            string xmlPath = Path.Combine(appPath, xmlFile);
+
+            return xmlPath;
         }
     }
 }

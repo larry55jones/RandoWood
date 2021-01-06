@@ -1,0 +1,67 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>RandoWoodAPI</name>
+    </assembly>
+    <members>
+        <member name="T:RandoWoodAPI.Program">
+            <summary>
+            RandoWoodAPI Entry class
+            </summary>
+        </member>
+        <member name="M:RandoWoodAPI.Program.Main(System.String[])">
+            <summary>
+            Program entry method
+            </summary>
+            <param name="args"></param>
+        </member>
+        <member name="M:RandoWoodAPI.Program.CreateHostBuilder(System.String[])">
+            <summary>
+            Invokes the startup class
+            </summary>
+            <param name="args"></param>
+            <returns></returns>
+        </member>
+        <member name="T:RandoWoodAPI.Startup">
+            <summary>
+            RandoWoodAPI Startup Class
+            </summary>
+        </member>
+        <member name="M:RandoWoodAPI.Startup.#ctor(Microsoft.Extensions.Configuration.IConfiguration)">
+            <summary>
+            Startup constructor
+            </summary>
+            <param name="configuration"></param>
+        </member>
+        <member name="P:RandoWoodAPI.Startup.Configuration">
+            <summary>
+            Reference to appSettings.json configuration data
+            </summary>
+        </member>
+        <member name="M:RandoWoodAPI.Startup.ConfigureServices(Microsoft.Extensions.DependencyInjection.IServiceCollection)">
+            <summary>
+            This method gets called by the runtime. Use this method to add services to the container.
+            </summary>
+            <param name="services"></param>
+        </member>
+        <member name="M:RandoWoodAPI.Startup.Configure(Microsoft.AspNetCore.Builder.IApplicationBuilder,Microsoft.AspNetCore.Hosting.IWebHostEnvironment)">
+            <summary>
+            This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
+            </summary>
+            <param name="app"></param>
+            <param name="env"></param>
+        </member>
+        <member name="T:RandoWoodAPI.Test.TestController">
+            <summary>
+            Controller for simple "are-we-up" tests
+            </summary>
+        </member>
+        <member name="M:RandoWoodAPI.Test.TestController.Test(System.String)">
+            <summary>
+            Give a string, get a string
+            </summary>
+            <param name="input">String to return</param>
+            <returns><paramref name="input"/></returns>
+        </member>
+    </members>
+</doc>
