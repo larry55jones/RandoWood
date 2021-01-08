@@ -56,6 +56,12 @@
             Controller for simple "are-we-up" tests
             </summary>
         </member>
+        <member name="M:RandoWoodAPI.Test.TestController.#ctor(Microsoft.Extensions.Logging.ILogger{RandoWoodAPI.Test.TestController})">
+            <summary>
+            Constructor.
+            </summary>
+            <param name="logger"></param>
+        </member>
         <member name="M:RandoWoodAPI.Test.TestController.Test(System.String)">
             <summary>
             Give a string, get a string

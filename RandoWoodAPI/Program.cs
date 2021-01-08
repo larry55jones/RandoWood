@@ -6,6 +6,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Serilog;
 
 namespace RandoWoodAPI
 {
@@ -20,6 +21,9 @@ namespace RandoWoodAPI
         /// <param name="args"></param>
         public static void Main(string[] args)
         {
+            Log.Logger = new LoggerConfiguration()
+                .MinimumLevel.Debug()
+                .WriteTo.File("C:\\Projects\\serverlog.txt").CreateLogger();
             CreateHostBuilder(args).Build().Run();
         }
 
@@ -33,6 +37,6 @@ namespace RandoWoodAPI
                 .ConfigureWebHostDefaults(webBuilder =>
                 {
                     webBuilder.UseStartup<Startup>();
-                });
+                }).UseSerilog();
     }
 }

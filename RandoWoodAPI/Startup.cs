@@ -46,6 +46,7 @@ namespace RandoWoodAPI
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "RandoWoodAPI", Version = "v1" });
                 c.IncludeXmlComments(GetXmlCommentsPath());
             });
+            services.AddLogging();
         }
 
         /// <summary>
@@ -72,7 +73,7 @@ namespace RandoWoodAPI
             });
         }
 
-        private string GetXmlCommentsPath()
+        private static string GetXmlCommentsPath()
         {
             string xmlFile = $"{Assembly.GetExecutingAssembly().GetName().Name}.xml";
             string appPath = AppContext.BaseDirectory;

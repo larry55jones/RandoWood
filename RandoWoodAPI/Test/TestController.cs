@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Logging;
 
 namespace RandoWoodAPI.Test
 {
@@ -9,6 +10,16 @@ namespace RandoWoodAPI.Test
     [ApiController]
     public class TestController : ControllerBase
     {
+        private readonly ILogger<TestController> _logger;
+
+        /// <summary>
+        /// Constructor.
+        /// </summary>
+        /// <param name="logger"></param>
+        public TestController(ILogger<TestController> logger)
+        {
+            _logger = logger;
+        }
         /// <summary>
         /// Give a string, get a string
         /// </summary>
@@ -17,6 +28,7 @@ namespace RandoWoodAPI.Test
         [HttpGet]
         public string Test(string input)
         {
+            _logger.LogInformation("Test endpoint called with {a}", input);
             return input;
         }
     }
