@@ -1,0 +1,11 @@
+2021-01-08 05:48:24.323 -06:00 [DBG] Hosting starting
+2021-01-08 05:48:24.508 -06:00 [DBG] Loaded hosting startup assembly RandoWoodAPI
+2021-01-08 05:48:24.512 -06:00 [INF] Application started. Press Ctrl+C to shut down.
+2021-01-08 05:48:24.512 -06:00 [INF] Hosting environment: Development
+2021-01-08 05:48:24.512 -06:00 [INF] Content root path: C:\Projects\RandoWood\RandoWoodAPI
+2021-01-08 05:48:24.512 -06:00 [DBG] Hosting started
+2021-01-08 05:48:24.534 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:61232/swagger/index.html - -
+2021-01-08 05:48:24.536 -06:00 [DBG] Wildcard detected, all requests with hosts will be allowed.
+2021-01-08 05:48:24.671 -06:00 [INF] Request finished HTTP/1.1 GET http://localhost:61232/swagger/index.html - - - 200 - text/html;charset=utf-8 138.5415ms
+2021-01-08 05:48:24.842 -06:00 [INF] Request starting HTTP/1.1 GET http://localhost:61232/swagger/v1/swagger.json - -
+2021-01-08 05:48:24.923 -06:00 [INF] Request finished HTTP/1.1 GET http://localhost:61232/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 80.3699ms

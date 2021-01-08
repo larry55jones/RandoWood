@@ -7,6 +7,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Serilog;
+using System.IO;
 
 namespace RandoWoodAPI
 {
@@ -21,9 +22,11 @@ namespace RandoWoodAPI
         /// <param name="args"></param>
         public static void Main(string[] args)
         {
+            if (!Directory.Exists("Logging"))
+                Directory.CreateDirectory("Logging");
             Log.Logger = new LoggerConfiguration()
                 .MinimumLevel.Debug()
-                .WriteTo.File("C:\\Projects\\serverlog.txt").CreateLogger();
+                .WriteTo.File("Logging\\serverlog.txt", rollingInterval: RollingInterval.Day).CreateLogger();
             CreateHostBuilder(args).Build().Run();
         }
 
